@@ -18,9 +18,9 @@ GET {{baseUrl}}/api/logout
 
 ###
 GET {{baseUrl}}/api/user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MzgxNjY4NCwiZXhwIjoxNjkzODIwMjg0fQ.Xy1J7jXp6Md-wd-OxZp6NCq4wkBHikEEEtPq9dUYXF8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5Mzg0MTI5OCwiZXhwIjoxNjkzODQ0ODk4fQ.aBaFmvixDPF_pPUt9dVMd068P_iKroeD5jThtM0WbUI
 
 
 ###
 GET {{baseUrl}}/api/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MzgxNjY4NCwiZXhwIjoxNjkzODIwMjg0fQ.Xy1J7jXp6Md-wd-OxZp6NCq4wkBHikEEEtPq9dUYXF8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5Mzg0MTA5MywiZXhwIjoxNjkzODQ0NjkzfQ.CYd9vPTh-MgEQBuUU_TKlUkQEwKZx2KSM9vgSYnSSbE

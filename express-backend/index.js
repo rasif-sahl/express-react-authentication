@@ -1,11 +1,9 @@
-const express = require('express');
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
-const passportJWT = require('passport-jwt');
-const ExtractJwt = passportJWT.ExtractJwt;
-const JwtStrategy = passportJWT.Strategy;
-const bcrypt = require('bcrypt');
-const cors = require('cors');
+import express from 'express';
+import passport from 'passport';
+import jwt from 'jsonwebtoken';
+import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
+import bcrypt from 'bcrypt';
+import cors from 'cors';
 
 const app = express();
 const port = 4000;
@@ -69,6 +67,10 @@ app.get('/api/logout', (req, res) => {
   // You can choose to invalidate the token by implementing a token blacklist,
   // but for simplicity, we'll just respond with a message indicating successful logout.
   res.json({ message: 'Logout successful' });
+});
+
+app.get('/api/user', passport.authenticate('jwt', { session: false }), (req, res) => {
+  res.json(req.user);
 });
 
 // Protected route with JWT authentication
