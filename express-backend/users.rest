@@ -1,0 +1,26 @@
+###
+@baseUrl = http://localhost:4000
+
+###
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{
+    "email": "hello@hello.com",
+    "password": "hellohello"
+} 
+
+# @token
+
+###
+GET {{baseUrl}}/api/logout
+
+
+###
+GET {{baseUrl}}/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MzgxNjY4NCwiZXhwIjoxNjkzODIwMjg0fQ.Xy1J7jXp6Md-wd-OxZp6NCq4wkBHikEEEtPq9dUYXF8
+
+
+###
+GET {{baseUrl}}/api/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MzgxNjY4NCwiZXhwIjoxNjkzODIwMjg0fQ.Xy1J7jXp6Md-wd-OxZp6NCq4wkBHikEEEtPq9dUYXF8
