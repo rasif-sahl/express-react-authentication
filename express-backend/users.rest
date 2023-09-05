@@ -18,7 +18,7 @@ GET {{baseUrl}}/api/logout
 
 ###
 GET {{baseUrl}}/api/user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5Mzg0MTI5OCwiZXhwIjoxNjkzODQ0ODk4fQ.aBaFmvixDPF_pPUt9dVMd068P_iKroeD5jThtM0WbUI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MzkyMzk0NCwiZXhwIjoxNjkzOTI3NTQ0fQ.TBNnLMJd8kPHuMPAd_wIANKVlME01s2LYoCLrMC8HtQ
 
 
 ###
