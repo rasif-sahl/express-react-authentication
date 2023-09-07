@@ -1,38 +1,21 @@
 import React, {useEffect} from 'react';
-import axios from 'axios';
+import apiCall from './request/apiCall';
 
 const Dashboard = ({token}) => {
 
     useEffect(() => {
-        console.log(token);
-
         if(token){
             const fetchData = async () => {
                 try {
-                    const response = await axios.get(
-                        'http://localhost:4000/api/user',
-                        {
-                            headers: {
-                                'Authorization': `Bearer ${token}`,
-                                'Content-Type': 'application/json',
-                            },
-                        }
-                    );
-                    if (response) {
-                        console.log(response);
-                    }
+                  const data = await apiCall('GET', '/api/user', null, token);
+                  console.log(data);
                 } catch (error) {
-                    console.error('Login error:', error);
+                  console.error('API request error:', error);
                 }
             };
-        
             fetchData();
-        
-            return () => {
-                // Perform any cleanup if needed
-            };
         }
-    }, [token]); // Specify 'token' as a dependency
+    }, [token]);
     
 
     return(    
