@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import apiCall from './request/apiCall';
+import ApiCall from '../request/apiCall';
 
 const Dashboard = ({token}) => {
 
@@ -7,7 +7,7 @@ const Dashboard = ({token}) => {
         if(token){
             const fetchData = async () => {
                 try {
-                  const data = await apiCall('GET', '/api/user', null, token);
+                  const data = await ApiCall('GET', '/api/user', null);
                   console.log(data);
                 } catch (error) {
                   console.error('API request error:', error);
