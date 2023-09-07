@@ -1,23 +1,20 @@
 import React, {useEffect} from 'react';
-import ApiCall from '../request/apiCall';
+import { getUsers } from '../store/request/users'
 
-const Dashboard = ({token}) => {
+const Dashboard = () => {
 
     useEffect(() => {
-        if(token){
-            const fetchData = async () => {
-                try {
-                  const data = await ApiCall('GET', '/api/user', null);
-                  console.log(data);
-                } catch (error) {
-                  console.error('API request error:', error);
-                }
-            };
-            fetchData();
-        }
-    }, [token]);
+        const fetchData = async () => {
+            try {
+                const data = await getUsers();
+                console.log(data)
+            } catch (error) {
+                console.error('API request error:', error);
+            }
+        };
+        fetchData();
+    }, []);
     
-
     return(    
         <>
             Dashboard 
