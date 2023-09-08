@@ -1,8 +1,11 @@
 import axios from 'axios';
+import store from '../selectors/store'
 
 const BASE_URL = 'http://localhost:4000'; // Replace with your API base URL
 
-const apiCall = async (method, url, data, token = null) => {
+const ApiCall = async (method, url, data) => {
+  const token = store.getState().auth.token;
+
   try {
     const config = {
       method,
@@ -27,4 +30,4 @@ const apiCall = async (method, url, data, token = null) => {
   }
 };
 
-export default apiCall;
+export default ApiCall;

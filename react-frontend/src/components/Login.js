@@ -2,11 +2,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setLoginToken } from '../store/action/authActions';
 
 function Login({ setToken }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,6 +28,7 @@ function Login({ setToken }) {
         );
         if(response){
             setToken(response.data.token);
+            dispatch(setLoginToken(response.data.token))
             navigate('/dashboard');
         }
     } catch (error) {
