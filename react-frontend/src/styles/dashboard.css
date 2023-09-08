@@ -1,0 +1,37 @@
+.dashboard {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 20px 50px 40px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.button-list li {
+    background-color: #952323;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-list li:hover {
+    background-color: #A73121;
+}
